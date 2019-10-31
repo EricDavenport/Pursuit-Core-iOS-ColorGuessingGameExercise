@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var randomColor: UIView!
     
+    @IBOutlet weak var highScoreLabel: UILabel!
+    
     @IBOutlet weak var scoreCounter: UILabel!
     
     @IBOutlet weak var greenButton: UIButton!
@@ -96,6 +98,7 @@ class ViewController: UIViewController {
         if currentScore > highScore {
             highScore = currentScore
         }
+        highScoreLabel.text = "High Score: \(highScore)"
         return highScore
     }
     
@@ -111,8 +114,22 @@ class ViewController: UIViewController {
     
     
     
+    @IBAction func newGame(_ sender: UIButton) {
+        chooseRandomColor()
+        score = 0
+        scoreCounter.text = "Score: \(score)"
+        rightWrongLabel.text = ""
+    }
     
     
+    @IBAction func reset(_ sender: UIButton) {
+        chooseRandomColor()
+        score = 0
+        highScore = 0
+        highScoreLabel.text = "High Score: \(highScore)"
+        scoreCounter.text = "Score: \(score)"
+        rightWrongLabel.text = ""
+    }
     
     
     
