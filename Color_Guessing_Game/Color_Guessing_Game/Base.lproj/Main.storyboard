@@ -38,7 +38,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMu-UA-2L1">
                                 <rect key="frame" x="20" y="179" width="374" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Az0-Al-FDS">
                                 <rect key="frame" x="168" y="563" width="79" height="67"/>
@@ -92,7 +91,7 @@
                     <connections>
                         <outlet property="blueButton" destination="dAa-Yg-aQ4" id="LQ6-3m-e48"/>
                         <outlet property="greenButton" destination="hU3-KO-JdK" id="6el-JJ-sVn"/>
-                        <outlet property="randomColor" destination="a3w-Em-Zmx" id="h6C-LL-VvW"/>
+                        <outlet property="randomColor" destination="yMu-UA-2L1" id="6H6-oJ-xLf"/>
                         <outlet property="redButton" destination="Az0-Al-FDS" id="f2h-ch-wQp"/>
                         <outlet property="rightWrongLabel" destination="4Zm-vm-i8l" id="6hS-0v-Lfv"/>
                         <outlet property="scoreCounter" destination="a3w-Em-Zmx" id="CSJ-tQ-RYi"/>

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var randGreen: CGFloat = 0.0
     var randBlue: CGFloat = 0.0
     var score: Int = 0
+    var highScore: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,8 @@ class ViewController: UIViewController {
                } else {
                    rightWrongLabel.textColor = .blue
                    rightWrongLabel.text = "INCORRECT"
+                score = 0
+                scoreCounter.text = "Score: \(score)"
                }
             
                
@@ -67,7 +70,9 @@ class ViewController: UIViewController {
                           } else {
                    rightWrongLabel.text = "INCORRECT"
                    rightWrongLabel.textColor = .red
-                                     }
+                        score = 0
+                scoreCounter.text = "Score: \(score)"
+            }
                
             
            case 2:
@@ -78,19 +83,27 @@ class ViewController: UIViewController {
                           } else {
                    rightWrongLabel.textColor = .green
                    rightWrongLabel.text = "INCORRECT"
-                                     }
+                         score = 0
+                   scoreCounter.text = "Score: \(score)"
+            }
             
            default:
                print("")
                
            }
        }
-    
+    func highScoreFunc(currentScore: Int) -> Int {
+        if currentScore > highScore {
+            highScore = currentScore
+        }
+        return highScore
+    }
     
     @IBAction func colorSelect(_ sender: UIButton) {
     
         answerSelect(sender: sender)
        
+        highScoreFunc(currentScore: score)
         
         chooseRandomColor()
     }
